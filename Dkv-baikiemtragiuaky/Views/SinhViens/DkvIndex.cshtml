@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Dkv_baikiemtragiuaky.Models.SinhVien>
+
+@{
+    ViewBag.Title = "DkvIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "DkvCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HOSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TENSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoa.TENKHOA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khoa.TENKHOA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "DkvEdit", new { id=item.MASV }) |
+            @Html.ActionLink("Details", "DkvDetails", new { id=item.MASV }) |
+            @Html.ActionLink("Delete", "DkvDelete", new { id=item.MASV })
+        </td>
+    </tr>
+}
+
+</table>

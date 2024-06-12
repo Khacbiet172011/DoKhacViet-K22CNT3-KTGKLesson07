@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLDiemModelStoreContainer" CdmEntityContainer="QLDiemEntities">
+    <EntitySetMapping Name="Khoa">
+      <EntityTypeMapping TypeName="QLDiemModel.Khoa">
+        <MappingFragment StoreEntitySet="Khoa">
+          <ScalarProperty Name="MAKHOA" ColumnName="MAKHOA" />
+          <ScalarProperty Name="TENKHOA" ColumnName="TENKHOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SinhVien">
+      <EntityTypeMapping TypeName="QLDiemModel.SinhVien">
+        <MappingFragment StoreEntitySet="SinhVien">
+          <ScalarProperty Name="MASV" ColumnName="MASV" />
+          <ScalarProperty Name="HOSV" ColumnName="HOSV" />
+          <ScalarProperty Name="TENSV" ColumnName="TENSV" />
+          <ScalarProperty Name="PHAI" ColumnName="PHAI" />
+          <ScalarProperty Name="NS" ColumnName="NS" />
+          <ScalarProperty Name="MAKHOA" ColumnName="MAKHOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

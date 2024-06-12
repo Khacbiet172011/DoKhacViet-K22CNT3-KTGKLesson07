@@ -1,0 +1,64 @@
+﻿@model Dkv_baikiemtragiuaky.Models.SinhVien
+
+@{
+    ViewBag.Title = "DkvDelete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HOSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoa.TENKHOA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoa.TENKHOA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "DkvIndex")
+        </div>
+    }
+</div>
